@@ -6,7 +6,7 @@ function Students() {
     const [students, setStudents] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:5000/api/students")
+        fetch("/api/students")
         .then((response) => response.json())
         .then(students =>{
             //setStudents((students[3]));
@@ -31,7 +31,7 @@ function Students() {
 
     return (
       <div className="students">
-        <h2> List of Students </h2>
+        <h2> List of Students Cohort 2022 </h2>
         <ul>
             {students.map(student =>
                 <li key={student.id}> {student.firstname} {student.lastname}</li>)}
