@@ -11,11 +11,7 @@ function Students() {
         .then(students =>{
             //setStudents((students[3]));
             //console.log("Testing", typeof students);
-            for (let index in students){
-               if( index !== "3"){
-                   setStudents(students);
-               }
-            };       
+            setStudents(students);       
         })
         
     }, []);
